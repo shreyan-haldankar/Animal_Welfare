@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+<script src="js/gallery.js"></script>
+    {% endblock head %}
+
+{% block content %}
+
+
+<div class="d1">
+    <h1>GALLERY</h1>
+    <h2>(before and after adoption)</h2>
+  </div>
+  <br />
+
+  <div class="img1">
+    <img src="{% static 'images/happy.jpg' %}" />
+    <img class="adjust" src="{% static 'images/waldo.jpg' %}" />
+    <img class="adjust" src="{% static 'images/niss.jpg' %}" />
+  </div>
+
+  <div class="img2">
+    <img src="{% static 'images/myka.jpg' %}" />
+    <img id="lola" src="{% static 'images/lola.jpg' %}" />
+  </div>
+
+  <div class="img3">
+    <img src="{% static 'images/samo.jpg' %}" />
+    <img class="adjust" src="{% static 'images/bow.jpg' %}" />
+    <img class="adjust" src="{% static 'images/baby.jpg' %}" />
+  </div>
+
+  <div class="img2">
+    <img src="{% static 'images/love.jpg' %}" />
+    <img id="lola" src="{% static 'images/corgi.jpg' %}" />
+  </div>
+
+  <div class="foot">
+    <center><h1>Adopt a dog and give them a new life!</h1></center>
+  </div>
+
+{% endblock content %}

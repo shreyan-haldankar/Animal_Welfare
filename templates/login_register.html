@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+ {% load static %} 
+ {% block head %}
+{% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endcomment %}
+
+ {% if page == 'register' %}
+
+     <!-- custom css file link  -->
+     <link rel="stylesheet" href="{% static 'css/sign up.css' %}" />
+    <!-- custom js file link  -->
+    <script src="{% static 'js/signup.js' %}"></script>
+ {% else %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endif %}
+{% endblock head %}
+
+{% block content %}
+
+{% if page == 'register' %}
+
+<div class="content">
+    <div class="head1">
+      <h1>Sign <span style="color: white">Up!</span></h1>
+    </div>
+    <form action="{% url 'register' %}" form name="myform2" onsubmit="myval()" method="post">
+        {% csrf_token %}
+
+        {% comment %} {{form.first_name}}
+        {{form.email}} {% endcomment %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        {% for field in form %}
+        <div id="form-group2">
+            {{field}}
+            {% for error in field.errors %}
+        <p style="color: red">{{error}}</p>
+        {% endfor %}
+        </div>
+        {% endfor %}
+      {% comment %} <div id="form-group1">
+        <input
+          type="text"
+          class="email-bt"
+          placeholder="Full Name"
+          style="color:black;"
+          required
+        />
+      </div>
+      <div id="form-group2">
+        <input
+          type="email"
+          class="email-bt"
+          placeholder="Email ID"
+          style="color:black;"
+          required
+        />
+      </div>
+      <div id="form-group2">
+        <input
+          type="number"
+          class="email-bt"
+          placeholder="Phone Number"
+          style="color:black;"
+          onKeyDown="if(this.value.length==10 && event.keyCode!=8) return false"
+          required
+        />
+      </div>
+      <div id="form-group2">
+        <input
+        style="color:black;"
+          type="password"
+          class="email-bt"
+          placeholder="Password (Minimum 8 characters)"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*+`~'=?\|\]\[\(\)\-<>/]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, one special character, and at-least 8 or more characters"
+          required
+        />
+      </div> {% endcomment %}
+
+      <div class="send_btn">
+        <button id="btn1" type="submit">Sign Up</button>
+        <a id="btn2" href="{% url 'login' %}">Login</a>
+      </div>
+      
+      <!-- <br> -->
+      <!-- <div class="send_btn">
+        <a id="btn1" type="submit">Login</a>
+      </div> -->
+    </form>
+    <!-- <div class="send_btn">
+      
+    </div> -->
+  </div>
+
+
+{% else %}
+
+<div class="content">
+  <div class="head1">
+    <h1>Login</h1>
+  </div>
+  <div action="" class="login">
+    <form action="{% url 'login' %}" method="POST">
+
+      {% csrf_token %}
+      <div id="form-group1">
+        <input
+          style="color: black"
+          type="text"
+          class="email-bt"
+          placeholder="Username"
+          name="username"
+          required
+        />
+      </div>
+      <div id="form-group2">
+        <input
+          style="color: black"
+          type="password"
+          class="email-bt"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="send_btn">
+        <button id="btn1" type="submit">Login</button>
+        <a id="btn2" href="{% url 'register' %}">Sign Up</a> 
+      </div>
+    </form>
+    {% comment %} <div class="sign">
+      <button id="btn2"><a href="sign.html">New User? Sign up!</a></button>
+    </div> {% endcomment %}
+  </div>
+</div>
+
+{% endif %}
+{% endblock content %}

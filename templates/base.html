@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome file link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    {% block head %}
+    
+    
+    {% endblock head %}
+
+
+
+
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endcomment %}
+
+    {% comment %} <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/profiles.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">  {% endcomment %}
+    <!-- jquery file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/4.ico' %}" />
+
+    <!-- custom js file link  -->
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    
+
+    
+
+    <title>Dog Adoption</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="{% url 'home' %}" class="logo"
+        ><img src="{% static 'images/logo.png' %}" alt="" />
+        <div class="logo-txt">Dog Adoption</div></a
+      >
+
+      <div class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a class="li2" href="{% url 'home' %}"
+              ><i class="bx bx-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'profiles' %}" class="li2"
+              ><i class="fa fa-paw" aria-hidden="true"></i> Adopt Now</a
+            >
+          </li>
+          <li>
+            <a class="li2" href="{% url 'gallery' %}"
+              ><i class="bx bx-news"></i> Gallery</a
+            >
+          </li>
+          
+          {% if request.user.is_authenticated %}
+          <li>
+            <a class="li2" href="{% url 'logout' %}">
+              <i class="bx bx-log-in"></i> Logout</a
+            >
+          </li>
+
+          <li>
+            <a class="li2" href="{% url 'donate' %}">
+              <i class="bx bx-log-in"></i> Donate</a
+            >
+          </li>
+          {% else %}
+          <li>
+            <a class="li2" href="{% url 'login' %}">
+              <i class="bx bx-log-in"></i> Login/Sign Up</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock content %}
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-center">
+            <h3>INFORMATION</h3>
+            <a href="{% url 'home' %}">About Us</a>
+          </div>
+          <div class="footer-center">
+            <h3>MY ACCOUNT</h3>
+            <a href="{% url 'login' %}">My Account</a>
+            
+
+            <a href="{% url 'profiles' %}">Apply For Adoption</a>
+          </div>
+          <div class="footer-center">
+            <h3>CONTACT US</h3>
+            <div>
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              Mumbai, India
+            </div>
+            <div>
+              <span>
+                <i class="far fa-envelope"></i>
+              </span>
+              dog@gmail.com
+            </div>
+            <div>
+              <span>
+                <i class="fas fa-phone"></i>
+              </span>
+              987654321
+            </div>
+            <div>
+              <span>
+                <i class="far fa-paper-plane"></i>
+              </span>
+              Mumbai, India
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    {% comment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endcomment %}
+  </body>
+</html>

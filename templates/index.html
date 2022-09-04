@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+    {% endblock head %}
+
+{% block content %}
+<!-- home section starts  -->
+{% comment %} {% load static %} {% endcomment %}
+<section id="home" class="home">
+  <div class="txt1">
+    <h1 class="banner">Dog Adoption</h1>
+    <h3 class="slogan">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+      possimus!
+    </h3>
+    <a href="#about"><button>get started</button></a>
+  </div>
+
+  <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
+</section>
+
+<!-- home section ends -->
+
+<!-- abuout section starts  -->
+
+<section id="about" class="about">
+  <div class="all-txt1">
+    <h1 class="heading">about us</h1>
+
+    <div class="txt2">
+      <div class="txt-img1">
+        <img src="{% static 'images/txt-img2.jpeg' %}" alt="" />
+      </div>
+
+      <div class="content">
+        <h3>PLANNING TO ADOPT A DOG?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          architecto explicabo! Tenetur aperiam, rem corporis ducimus ipsum
+          necessitatibus pariatur deserunt, deleniti ab molestiae esse fugit
+          quod eveniet voluptas, in vel!
+        </p>
+        <div class="btns">
+          <a href="profiles"><button class="btn">Adopt Now</button></a>
+          <a
+            href="https://www.humanesociety.org/resources/top-reasons-adopt-pet"
+            ><button class="btn">Learn More</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about2">
+  <div class="txt-img2">
+    <img src="{% static 'images/txt-img1.jpg' %}" alt="" />
+  </div>
+  <div class="content2">
+    <h3>What We Do?</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis provident,
+      ad assumenda quam, consequuntur deserunt voluptatem impedit, cupiditate
+      repudiandae ex illo doloremque expedita recusandae dicta id placeat
+      molestias cumque culpa!
+    </p>
+    <a
+      href="https://www.peta.org/issues/animal-companion-issues/animal-shelters/"
+    >
+      <button id="btn2" class="btn">Learn More</button>
+    </a>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*-padding and border are included in the width and height-*/
+  text-transform: capitalize;
+  transition: all .2s linear;
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+
+  background-image: linear-gradient(rgba(4,3,10,0.5),rgba(4,3,10,0.5)),url(img/sign.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat ;
+  margin-top: 57%;
+
+}
+
+
+.header{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  position: fixed;
+  top:0; left: 0;
+  z-index: 100;
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  color: white;
+}
+
+.header .logo img{
+  padding: 0 0.5rem;
+  width:13rem;
+  margin-bottom: -10%;
+}
+
+.header .logo div{
+  display: inline;
+  position: absolute;
+  top: 33%;
+  margin-left: -1%;
+  font-size: 110%;
+  background-color:black;
+}
+.header .logo div:hover{
+  letter-spacing: 0.1rem;
+  color: #8c3d08;
+}
+
+.header .navbar ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 150%;
+
+}
+
+.header .navbar ul li{
+  margin: 0 1.5rem;
+
+}
+
+.header .navbar ul li a{
+  font-size: 2 rem;
+  color: white;
+}
+
+.header .navbar ul li a:hover{
+  color:#f5da95;
+}
+
+.header .fa-bars{
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+  display: none;
+}
+
+.content{height:83%;
+	  width:85%;
+	  position: absolute;
+	  margin-left:9%;
+	  border-radius: 10px;
+    margin-top: -24%;
+	}
+
+#form-group1{margin-top:-10%;
+			opacity:0.5;}
+
+#form-group2{margin-top:1.5%;
+			opacity:0.5;}
+
+
+.email-bt{border: 1px solid black;
+    color: white;
+    width: 40%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;}
+
+.head1{height:20%;
+	  width:20%;
+	  background-color:#202020;
+	  margin-left:10%;
+	  box-shadow: 12px 15px 10px 2px #000000;
+	  text-align:center;
+    position: absolute;
+    margin-top: -20%;
+	}
+
+.head1 h1{color:#f28500;
+	font-size:30px;
+	}
+
+
+#btn1{
+    background-color: #fd7e14;
+    border: none;
+    color: #ffffff;
+    width: 100px;
+    height: 58px;
+    border-radius: 25px;
+    font-size: 20px;
+	margin-left:13%;
+	margin-top:5%;
+  cursor: pointer;
+}
+
+
+@media (max-width:900px){
+  html{
+    font-size: 50%;
+  }
+
+  .header .fa-bars{
+    display: block;
+  }
+  .header .fa-bars:hover{
+    color: #8c3d08;
+  }
+
+  .header .navbar{
+    position: fixed;
+    top:-120%; left:0;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    border-top: .1rem solid rgba(0,0,0,0.3);
+    margin-left: 3rem;
+  }
+
+  .header .navbar ul{
+    height: 100%;
+    width: 100;
+    flex-flow: column;
+  }
+
+  .header .navbar ul li{
+    margin: 1rem 0rem;
+  }
+
+  .header .navbar ul li a{
+    color: chocolate;
+    font-size: 2.4rem;
+  }
+
+  .header .fa-times{
+    transform: rotate(180deg);
+  }
+
+  .header .nav-toggle{
+    top:12rem;
+  }
+
+
+
+  }
+
+
+  @media(max-width:1062px){
+    body{background-image: linear-gradient( #861415 20%, khaki);
+      background-repeat: none;
+      min-height: 100vh;
+  }
+  .content{
+    margin-top: -20%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .head1{
+    margin-left: auto;
+    height: auto;
+  }
+
+  .email-bt{
+      width: auto;
+      height: 40px;
+      font-size: 16px;
+    }
+
+  #form-group1{
+    margin-top: -10%;
+  }
+
+  .send_btn{
+    display: flex;
+    justify-content: center;
+    margin-right: 8%;
+  }
+}
+  @media(max-width:730px){
+    body{
+      background-image: linear-gradient(rgba(4,3,10,0.5),rgba(4,3,10,0.5)),url(img/signup.jpg);
+
+    }
+    .content{
+      margin-top: -5%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    #form-group1{
+      margin-top: 40%;
+    }
+
+}

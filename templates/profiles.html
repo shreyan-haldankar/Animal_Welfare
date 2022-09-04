@@ -1,0 +1,141 @@
+{% extends 'base.html' %} 
+{% load static %}
+ {% block head %}
+<link rel="stylesheet" href="{% static 'css/profiles.css' %}" />
+
+{% endblock head %}
+ {% block content %}
+
+<section class="section all-products" id="products">
+  <div class="heading">
+    <h1>DOGS FOR ADOPTION</h1>
+  </div>
+
+  <div class="product-center container">
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph1.jpg'%}" alt="" />
+        <ul class="icons">
+          <span><i class="bx bx-male-sign"></i></span>
+          <a href="cart.html"> <span>1y</span> </a>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <a href="product-details.html">
+          <h3>Rambo</h3>
+        </a>
+
+        <h4 class="boy">havanese</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph2.jpg'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-male-sign"></i></span>
+          <span>2m</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Itachi</h3>
+        <h4 class="boy">beagle</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph3.jpg'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-female-sign"></i></span>
+          <span>1y</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Daisy</h3>
+
+        <h4 class="girl">Golden retriever</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph4.jpg'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-female-sign"></i></span>
+          <span>7m</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Jesse</h3>
+        <h4 class="girl">indie</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph5.png'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-female-sign"></i></span>
+          <span>4m</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>shakuntala</h3>
+        <h4 class="girl">golden retriever</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph6.jpeg'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-male-sign"></i></span>
+          <span>6m</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Buddy</h3>
+        <h4 class="boy">havanese</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph7.jpg'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-male-sign"></i></span>
+          <span>2y</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Sasuke</h3>
+        <h4 class="boy">husky</h4>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-header">
+        <img src="{% static 'images/ph8.png'%}" alt="" />
+
+        <ul class="icons">
+          <span><i class="bx bx-male-sign"></i></span>
+          <span>1y</span>
+          <span><i class="bx bx-search"></i></span>
+        </ul>
+      </div>
+      <div class="product-footer">
+        <h3>Browny</h3>
+        <h4 class="boy">Golden retriever</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

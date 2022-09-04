@@ -1,0 +1,74 @@
+body{min-height: 100vh;
+  width: 100%;
+  background-image:url(img/pitty.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+
+.main{height:83%;
+	  width:85%;
+
+	  position:absolute;
+	  margin-left:7%;
+	  border-radius: 10px;
+	  transition: ease all 0.5s;
+	}
+
+.form-group{margin-top:2%;
+			margin-left:2%;
+			opacity:0.5;}
+
+.email-bt{border: 1px solid black;
+    color: black;
+    width: 95%;
+    height: 35px;
+    font-size: 22px;
+    padding: 10px;}
+
+.message-bt{color: black;
+	        border: 1px solid black;
+			font-size: 22px;
+			padding: 2px;}
+
+.head1{height:20%;
+	  width:20%;
+	  background-color:#202020;
+	  margin-left:40%;
+	  margin-top:-20px;
+	  box-shadow: 12px 15px 10px 2px #000000;
+	  text-align:center;
+	}
+
+.head1 h1{color:#f28500;
+	font-size:50px;
+	}
+
+#btn1{
+    background-color: #fd7e14;
+    border: none;
+    color: #ffffff;
+    width: 160px;
+    height: 58px;
+    border-radius: 25px;
+    font-size: 26px;
+	margin-left:45%;
+	margin-top:1%;
+}
+
+@media (max-width:1250px){
+	html{
+	  font-size: 50%;
+	}
+
+	.main{
+		margin-top: 20%;
+	}
+
+	.head1{
+		margin-top: 20%;
+	}
+}
