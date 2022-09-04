@@ -239,8 +239,56 @@ body{
 }
 
 @media (max-width:900px){
-  .header {
-    min-height: 100vh;
+  html{
+    font-size: 50%;
+  }
+
+  .header .fa-bars{
+    display: block;
+    
+
+  }
+  .header .fa-bars:hover{
+    color: #8c3d08;
+  }
+
+  .header .navbar{
+    position: fixed;
+    top:-120%; left:0;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    border-top: .1rem solid rgba(0,0,0,0.3);
+    margin-left: 3rem;
+  }
+
+  .header .navbar ul{
+    height: 100%;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  .header .navbar ul li{
+    margin: 1rem 0rem;
+  }
+
+  .header .navbar ul .li2 {
+      font-size: 2 rem;
+      color: chocolate;
+  }
+
+  .header .fa-times{
+    transform: rotate(180deg);
+  }
+
+  .header .navbar ul .li2{
+    font-size: 2 rem;
+    
+  }
+
+  .header .nav-toggle{
+    top:12rem;
   }
 
   .header .hero-img {

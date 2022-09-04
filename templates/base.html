@@ -15,6 +15,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+
     {% block head %}
     
     
@@ -99,6 +102,17 @@
       </nav>
     </header>
 
+    {% if messages %}
+  {% for message in messages %}
+    
+  <div class="alert alert--{{message.tags}}">
+    <p class="alert__message">{{message}}</p>
+    <button class="alert__close">⨯</button>
+  </div>
+
+  {% endfor %}
+{% endif %}
+
     {% block content %} {% endblock content %}
 
     <!-- Footer -->
@@ -152,4 +166,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {% endcomment %}
   </body>
+  <script src="{% static 'uikit/app.js' %}"></script>
 </html>
