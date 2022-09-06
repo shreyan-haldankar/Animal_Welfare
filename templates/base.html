@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="{% static 'css/profiles.css' %}" />
 
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/donation.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/login.css' %}">  {% endcomment %}
     <!-- jquery file link  -->
@@ -71,6 +72,11 @@
           <li>
             <a href="{% url 'profiles' %}" class="li2"
               ><i class="fa fa-paw" aria-hidden="true"></i> Adopt Now</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'donate' %}" class="li2"
+              ><i class="fa fa-paw" aria-hidden="true"></i>Donation</a
             >
           </li>
           <li>
