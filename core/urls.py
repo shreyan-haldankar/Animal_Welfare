@@ -10,6 +10,8 @@ urlpatterns = [
     path('profiles/', views.profiles, name="profiles"),
     path('gallery/', views.gallery, name="gallery"),
     path('donate/', views.donatePage, name="donate"),
+    path('donationSuccess/', views.donationSuccess, name="donationSuccess"),
+
 
     # path('login/', views.loginPage, name="login"),
 

@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from .models import Profile
+from .models import Profile, Donation
 from .forms import CustomUserCreationForm, ProfileForm
 from django.contrib.auth.models import User
 # Create your views here.
@@ -22,7 +22,38 @@ def loginPage(request):
 
 @login_required(login_url='login')
 def donatePage(request):
-    return render(request, 'donate.html')
+    
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('name')
+        address = request.POST.get('address')
+        city = request.POST.get('city')
+        state = request.POST.get('state')
+        zipcode = request.POST.get('zipcode')
+        card_name = request.POST.get('card_name')
+        card_number = request.POST.get('card_number')
+        exp_month = request.POST.get('exp_month')
+        exp_year = request.POST.get('exp_year')
+        cvv = request.POST.get('cvv')
+        donationAmount = request.POST.get('donationAmount')
+
+        dn = Donation(name = name, email = email, address = address, city = city, 
+        state = state, zipcode = zipcode, card_name = card_name, card_number=card_number,
+        exp_month = exp_month, exp_year = exp_year, cvv = cvv, donationAmount = donationAmount)
+
+        dn.save()
+        messages.success(request,"Thank you for your donation")
+        return redirect('donationSuccess')
+
+
+
+
+    return render(request, 'donationPage.html')
+
+@login_required(login_url='login')
+def donationSuccess(request):
+    return render(request,'donationSuccess.html')
+
 
 def loginUser(request):
     page = 'login'

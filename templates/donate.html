@@ -11,9 +11,11 @@
 
 
   <div class="donation-container">
- 
+ <form action="{% url 'donate' %}" method="POST">
 
-    <div class="honor-form" style="display:none;">
+    {% comment %} <div class="honor-form" style="display:none;"> {% endcomment %}
+    <div class="honor-form" >
+
         <fieldset>
             <label for="type">Honor Gift Type:</label>
             <select name="gift_type" id="gift_type">
@@ -398,11 +400,13 @@
 
     </div>
 
-    <div id="donately_form ">
+    {% comment %} <div id="donately_form ">
         <script class="donately-donation-form mb-5" src="https://s3-us-west-1.amazonaws.com/static-dntly-com/form.js" type="text/javascript" data-donately-ssl="true"  async="async" data-donately-id="198" data-donately-address="true" data-donately-comment="true" data-donately-phone="true"></script>
-    </div>
-  
-    
+    </div> {% endcomment %}
+
+    <button>Submit</button>
+
+</form>
 </div>
 
 {% endblock content %}

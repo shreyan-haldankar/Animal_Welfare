@@ -17,6 +17,30 @@ class Profile(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)
 
-
     def __str__(self):
         return str(self.user.username)
+
+
+class Donation(models.Model):
+    # user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=100)
+    address = models.CharField( max_length=1000)
+    city = models.CharField( max_length= 200)
+    state = models.CharField(max_length=100)  
+    zipcode = models.IntegerField()
+
+    card_name = models.CharField(max_length=100)
+    card_number = models.IntegerField()
+
+    exp_month = models.CharField(max_length=50)
+    exp_year = models.IntegerField()
+
+    cvv = models.IntegerField()
+    donationAmount  = models.IntegerField()
+
+    def __str__(self):
+        return str(self.donationAmount)
+
+
+
