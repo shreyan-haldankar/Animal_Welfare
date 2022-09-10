@@ -17,6 +17,9 @@ def profiles(request):
 def gallery(request):
     return render(request, 'gallery.html')
 
+def blog(request):
+    return render(request, 'blog.html')
+
 def loginPage(request):
     return render(request, 'login_register.html')
 

@@ -15,7 +15,7 @@
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+  /* background: linear-gradient(90deg, #d08c5b 60%, #dcc98a 40.1%) no-repeat; */
 }
 
 .container form{

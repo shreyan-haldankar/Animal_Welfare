@@ -69,14 +69,16 @@
               ><i class="bx bx-home"></i> Home</a
             >
           </li>
+
+          <li>
+            <a href="{% url 'blog' %}" class="li2"
+              ><i class="fa fa-paw" aria-hidden="true"></i>Blog</a
+            >
+          </li>
+
           <li>
             <a href="{% url 'profiles' %}" class="li2"
               ><i class="fa fa-paw" aria-hidden="true"></i> Adopt Now</a
-            >
-          </li>
-          <li>
-            <a href="{% url 'donate' %}" class="li2"
-              ><i class="fa fa-paw" aria-hidden="true"></i>Donation</a
             >
           </li>
           <li>
@@ -86,15 +88,16 @@
           </li>
           
           {% if request.user.is_authenticated %}
-          <li>
-            <a class="li2" href="{% url 'logout' %}">
-              <i class="bx bx-log-in"></i> Logout</a
-            >
-          </li>
+         
 
           <li>
             <a class="li2" href="{% url 'donate' %}">
-              <i class="bx bx-log-in"></i> Donate</a
+              <i class="bx bx-log-in"></i> Donation</a
+            >
+          </li>
+          <li>
+            <a class="li2" href="{% url 'logout' %}">
+              <i class="bx bx-log-in"></i> Logout</a
             >
           </li>
           {% else %}
