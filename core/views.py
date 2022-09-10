@@ -20,6 +20,9 @@ def gallery(request):
 def blog(request):
     return render(request, 'blog.html')
 
+def blogTrial(request):
+    return render(request, 'blog_trial.html')
+
 def loginPage(request):
     return render(request, 'login_register.html')
 

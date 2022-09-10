@@ -1,0 +1,58 @@
+{% load static %}
+
+<header class="header">
+    <a href="{% url 'home' %}" class="logo"
+      ><img src="{% static 'images/logo.png' %}" alt="" />
+      <div class="logo-txt">Dog Adoption</div></a
+    >
+
+    <div class="fas fa-bars"></div>
+
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a class="li2" href="{% url 'home' %}"
+            ><i class="bx bx-home"></i> Home</a
+          >
+        </li>
+
+        <li>
+          <a href="{% url 'blog' %}" class="li2"
+            ><i class="fa fa-paw" aria-hidden="true"></i>Blog</a
+          >
+        </li>
+
+        <li>
+          <a href="{% url 'profiles' %}" class="li2"
+            ><i class="fa fa-paw" aria-hidden="true"></i> Adopt Now</a
+          >
+        </li>
+        <li>
+          <a class="li2" href="{% url 'gallery' %}"
+            ><i class="bx bx-news"></i> Gallery</a
+          >
+        </li>
+        
+        {% if request.user.is_authenticated %}
+       
+
+        <li>
+          <a class="li2" href="{% url 'donate' %}">
+            <i class="bx bx-log-in"></i> Donation</a
+          >
+        </li>
+        <li>
+          <a class="li2" href="{% url 'logout' %}">
+            <i class="bx bx-log-in"></i> Logout</a
+          >
+        </li>
+        {% else %}
+        <li>
+          <a class="li2" href="{% url 'login' %}">
+            <i class="bx bx-log-in"></i> Login/Sign Up</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>

@@ -11,6 +11,8 @@ urlpatterns = [
     path('gallery/', views.gallery, name="gallery"),
     path('donate/', views.donatePage, name="donate"),
         path('blog/', views.blog, name="blog"),
+        path('blog-trial/', views.blogTrial, name="blog-trial"),
+
     path('donationSuccess/', views.donationSuccess, name="donationSuccess"),
 
 
